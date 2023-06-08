@@ -1,0 +1,114 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/fonts.scss";
+@use "../../styles/partials/mixins.scss";
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+    top: 1rem;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.homepage {
+  &__container {
+    position: relative;
+    animation-name: loading;
+    animation-duration: 1s;
+  }
+  &__card {
+    &--icon {
+      transition: transform 0.2s, color 1s;
+    }
+    &--link {
+      &:hover {
+        .homepage__card--icon {
+          transform: scale(1.1);
+        }
+        .contact {
+          color: colors.$Magenta;
+        }
+        .coding {
+          color: colors.$Cyan;
+        }
+        .creative {
+          color: colors.$Yellow;
+        }
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .homepage {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__card {
+      @include mixins.homecard;
+      width: 22rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--text {
+        font-family: LemonMilk;
+        font-size: 2.5rem;
+        position: relative;
+        text-align: left;
+        margin-right: 2rem;
+      }
+      &--link {
+        text-decoration: none;
+        &:visited {
+          color: colors.$Black;
+        }
+      }
+      &--icon {
+        width: 5rem;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .homepage {
+    height: auto;
+    min-height: 100%;
+
+    
+    &__title {
+      width: 80%;
+      margin: 1rem auto;
+    }
+    &__container {
+      margin: auto;
+      width: 80%;
+      height: 20rem;
+      display: flex;
+      justify-content: center;
+    }
+    &__card {
+      @include mixins.homecard;
+      height: calc(100% - 2rem);
+      width: 100%;
+      &--text {
+        font-family: LemonMilk;
+      }
+      &--link {
+        text-decoration: none;
+        &:visited {
+          color: colors.$Black;
+        }
+      }
+      &--icon {
+        width: 10rem;
+      }
+    }
+  }
+}

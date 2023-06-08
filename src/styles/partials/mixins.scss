@@ -1,0 +1,13 @@
+@mixin homecard() {
+    cursor: pointer;
+    padding: 1rem;
+}
+
+@mixin tile() {
+    width: 9rem;
+    margin: 0.5rem;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}

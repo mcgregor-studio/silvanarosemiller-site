@@ -1,0 +1,104 @@
+@use "../../styles/partials/colors.scss";
+
+@keyframes loading {
+    0% {
+      opacity: 0;
+      top: 1rem;
+    }
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+.ac {
+    position: relative;
+    animation-name: loading;
+    animation-duration: 1s;
+    padding: 0 5rem 1rem 5rem;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        &--container {
+            display: flex;  
+            align-items: center;  
+        }
+        &--input {
+            margin-left: 0.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid colors.$Black;
+            &:focus {
+                outline: none;
+                border-bottom: 3px solid colors.$Black;
+            }
+        }
+        &--textarea {
+            resize: none;
+            height: 5rem;
+            margin-bottom: 1rem;
+        }
+        &--submit {
+            margin: auto;
+            width: 25%;
+            background-color: colors.$Black;
+            border: none;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            font-family: LemonMilk;
+            color: colors.$White;
+            letter-spacing: 0.075rem;
+            transition: background-color, 0.25s;
+                cursor: pointer;
+                &:hover {
+                    background-color: colors.$OffBlack;
+                }
+            
+        }
+    }
+    &__hello {
+        margin-top: 5rem;
+    }
+    &__message {
+        position: relative;
+        margin-top: 5rem;
+        animation-name: loading;
+        animation-duration: 1s;
+    }
+}
+
+@media (orientation: portrait) {
+    .ac {
+        &__form {
+            &--container{
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .ac {
+        &__text {
+            width: 60%;
+            margin: auto;
+        }
+        &__form {
+            &--container{
+                justify-content: center;
+            }
+            &--input {
+                &:first-child {
+                    margin-right: 1rem;
+                }
+            }
+            &--textarea {
+                min-width : 30rem;
+                max-width: 50rem;
+                margin: 1rem auto;
+            }
+        }
+    }
+}

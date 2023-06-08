@@ -1,0 +1,33 @@
+@use "../src/styles/partials/colors.scss";
+
+.App {
+  padding: 1rem;
+  text-align: center;
+  height: calc(100vh - 2rem);
+}
+
+body, #root {
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: colors.$OffWhite;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1s ease-out forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.display {
+  display: flex;
+}

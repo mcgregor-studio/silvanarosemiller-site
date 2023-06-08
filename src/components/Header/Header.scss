@@ -1,0 +1,38 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/fonts.scss";
+
+.header {
+    width: calc(100vw - 2rem);
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem auto;
+    }
+    &__link {
+        text-decoration: none;
+        font-family: LemonMilk;
+        &:visited {
+            color: colors.$Black;
+        }
+        &:hover {
+            color: colors.$OffBlack;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .header {
+        width: calc(100vw - 3rem);
+        &__container {
+            width: 80%;
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .header {
+        &__container {
+            width: 50%;
+        }
+    }
+}
