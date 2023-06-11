@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Form from "../../components/Form/Form";
-import "./AboutContact.scss";
+import "./Contact.scss";
 import { send } from "emailjs-com";
 import { publicKey } from "../../components/PublicKey/PublicKey";
 
-export default function AboutContact() {
+export default function Contact() {
   const [toSend, setToSend] = useState({
     from_name: "",
     message: "",
@@ -15,8 +15,8 @@ export default function AboutContact() {
   const mail = (e) => {
     e.preventDefault();
     send(
-      "service_enxg60h",
-      "template_nim5q3k",
+      "service_538vkpp",
+      "template_kn6ra3e",
       toSend,
       publicKey
     ).then((res) => {
@@ -30,13 +30,13 @@ export default function AboutContact() {
   };
 
   return (
-    <section className="ac">
-      <h2 className="ac__tagline">
+    <section className="contact" id="contact">
+      <h2 className="contact__tagline">
         — Direct, coherent, and clear as day. Design &amp; development for
         brands, publications, and people.
       </h2>
-      <h2 className="ac__name">Christopher McGregor</h2>
-      <p className="ac__text">
+      <h2 className="contact__name">Christopher McGregor</h2>
+      <p className="contact__text">
         I specialized in Bioethics at the University of Toronto and received an
         honours Bachelor of Arts before making the move to Interactive Media
         Design at Seneca College for my post-graduate degree. After interning at

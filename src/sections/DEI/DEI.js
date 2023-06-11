@@ -1,25 +1,38 @@
 import React from "react";
-import Tile from "../../components/Tile/Tile";
-import develop1 from "../../data/assets/develop-1.png";
-import develop2 from "../../data/assets/develop-2.png";
-import develop3 from "../../data/assets/codepen-logo.svg";
-import develop4 from "../../data/assets/github-logo.svg"; 
-import "./Coding.scss";
+import inclusion from "../../data/assets/inclusion.jpg";
+import "./DEI.scss";
 
-export default function Coding() {
+export default function DEI() {
   return (
-    <section className="coding">
-      <h2 className="coding__title">
-        — This collection of coding projects uses the React codebase and covers a variety of subjects, from microsites to webpage
-        recreations.
-      </h2>
-
-      <div className="coding__container">
-        <Tile className="coding__tile" link="https://www.teamultraforce.com" source={develop1} />
-        <Tile className="coding__tile" link="https://gallerai-client.herokuapp.com" source={develop2} />
-        <Tile className="coding__tile" link="https://codepen.io/mcgregor-studio" source={develop3} />
-        <Tile className="coding__tile" link="https://github.com/mcgregor-studio" source={develop4} />
+    <section className="dei" id="dei">
+      <img className="dei__image" src={inclusion} />
+      <div className="dei__container">
+        <h2 className="dei__title">DEI Consulting Services</h2>
+        <p className="dei__text">
+          Silvana Rose Miller is a media and cultural consultant who specializes
+          in Diversity, Equity and Inclusion. Through research, education, and
+          her expertise in the industry she reviews projects from their
+          conception to final delivery and supports productions in the aim to
+          have authentic non-stereotypical characters and stories. Notes would
+          cover cultural insights, historical backgrounds, and any political or
+          pop cultural events that may cause any DEI flags. Services can be
+          provided for:
+        </p>
+        <ul className="dei__list">
+          <li>Televisions Series</li>
+          <li>Movies / Films</li>
+          <li>Casting Calls</li>
+          <li>YouTube Content</li>
+          <li>Streaming Services</li>
+          <li>Commercials</li>
+          <li>Video Games</li>
+          <li>Apps/Digital Games</li>
+        </ul>
+        <a className="dei__button" href="#contact">
+          Email for a Quote
+        </a>
       </div>
+      
     </section>
   );
 }

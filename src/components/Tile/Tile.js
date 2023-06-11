@@ -2,8 +2,9 @@ import React from "react";
 
 export default function Tile(props) {
   return (
-    <a href={props.link}>
-      <img className={props.className} src={props.source} alt="link icon" />
-    </a>
+    <div className="tile">
+      <p>"{props.quote}"</p>
+      <p>- <strong>{props.person}</strong>, <i>{props.job}</i></p>
+    </div>
   );
 }
