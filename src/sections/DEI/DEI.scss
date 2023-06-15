@@ -1,30 +1,78 @@
+@use "../../styles/partials/colors.scss";
 @use "../../styles/partials/mixins.scss";
 
 @keyframes loading {
     0% {
       opacity: 0;
-      top: 1rem;
+      right: 1rem;
     }
     100% {
       opacity: 1;
-      top: 0;
+      right: 0;
     }
   }
 
 .dei {
+  @include mixins.section-margin;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
     position: relative;
     animation-name: loading;
     animation-duration: 1s;
     &__title {
-        width: 80%;
-        margin: 1rem auto;   
+      width: 100%;
+      margin: 1rem auto;   
+  }
+  &__text {
+    max-width: 40rem;
+    margin: 0 5rem;
+  }
+  &__list {
+    max-width: 10rem;
+  }
+  &__image {
+    & > img {
+      max-width: 40vw;
+      margin-right: 4rem;
     }
-    &__tile {
-        @include mixins.tile;
+  }
+  &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+  }
+  &__button {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    border-radius: 0.5rem;
+    background: colors.$Black;
+    text-decoration: none;
+    padding: 1rem;
+    &:visited {
+      color: rgb(195, 195, 195);
+  }
+  &:hover {
+      color: colors.$OffWhite;
+  }
+  }
+}
+
+@media (orientation: portrait) {
+  .dei {
+    margin: 2rem;
+    flex-direction: column;
+    align-items: center;
+    &__image {
+       & > img {
+      max-width: 100vw;
+      margin-right: 0;
+       }
     }
-    &__container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+    &__text {
+      margin: 0;
     }
+  }
 }

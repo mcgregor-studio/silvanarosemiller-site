@@ -31,36 +31,6 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <h2 className="contact__tagline">
-        — Direct, coherent, and clear as day. Design &amp; development for
-        brands, publications, and people.
-      </h2>
-      <h2 className="contact__name">Christopher McGregor</h2>
-      <p className="contact__text">
-        I specialized in Bioethics at the University of Toronto and received an
-        honours Bachelor of Arts before making the move to Interactive Media
-        Design at Seneca College for my post-graduate degree. After interning at
-        TLA Graphics, I went on to design at Sunrise Medical Canada Inc., where
-        I have worked for the past five years.
-        <br />
-        <br />
-        I balance my day job with personal creative work, like comics and
-        creature design - these were posted online and eventually compiled into
-        2 books. The knowledge I gained from these publications has drastically
-        changed how I approach my design work for any given project.
-        <br />
-        <br />
-        My design philosophy is focused on simplicity - I like to use simple
-        shapes and linework to create a piece that is easily parsed and legible.
-        I often experiment with a few different iterations of a design to show
-        the client, and then refine the ideas in that iteration once they have
-        chosen the option they would like to pursue.
-        <br />
-        <br />I believe there’s an unseen effort that goes into minimalism -
-        often unnoticed. In each design that I make, my aim is to make my
-        efforts invisible - as if it was always meant to be that way.
-      </p>
-      
       <Form submit={mail} toSend={toSend} useForm={useForm} handleChange={handleChange} />
     </section>
   );

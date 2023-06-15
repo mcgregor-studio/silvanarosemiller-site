@@ -1,24 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import background from "../../data/assets/TVs.jpg";
 import "./Header.scss";
 
 export default function Header() {
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{
+        background: `url(${background}), #ffc9c9 no-repeat cover 120% 50%`
+      }}
+    >
+      <h2 className="header__title">Silvana Rose Miller: <br />DEI Consulting, Writing & Producing</h2>
       <div className="header__container">
-        <Link className="header__link" to="#contact">
-          Contact
-        </Link>
-
-        <Link className="header__link" to="#about">
+        <a className="header__link" href="#about">
           About
-        </Link>
-        <Link className="header__link" to="#dei">
+        </a>
+        <a className="header__link" href="#dei">
           DEI
-        </Link>
-        <Link className="header__link" to="#testimonials">
+        </a>
+        <a className="header__link" href="#testimonials">
           Testimonials
-        </Link>
+        </a>
+        <a className="header__link" href="#contact">
+          Contact
+        </a>
       </div>
     </header>
   );

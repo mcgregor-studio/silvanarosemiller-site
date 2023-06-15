@@ -1,15 +1,27 @@
 @use "../src/styles/partials/colors.scss";
+@use "../src/styles/partials/fonts.scss";
+
 
 .App {
-  padding: 1rem;
   text-align: center;
   height: calc(100vh - 2rem);
 }
 
+section {
+  padding: 1rem;
+}
 body, #root {
   overflow-x: hidden;
   height: 100vh;
-  background-color: colors.$OffWhite;
+  background-color: colors.$White;
+}
+
+h2, a {
+  font-family: Primary;
+}
+
+p, li {
+  font-family: Secondary;
 }
 
 .path {

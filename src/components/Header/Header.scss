@@ -2,15 +2,32 @@
 @use "../../styles/partials/fonts.scss";
 
 .header {
-    width: calc(100vw - 2rem);
+    margin-left: -1rem;
+    height: 35rem;
+    width: 100vw;
+    &__title {
+        padding: 13rem 0 0 5rem;
+        font-size: 2.5rem;
+        text-shadow: 4px 4px colors.$White;
+        line-height: 1.6;
+        text-align: left;
+    }
     &__container {
+        background-color: colors.$White;
+        position: fixed;
+        z-index: 5001;
+        top: 0;
+        left: 0;
+        width: 100vw;
         display: flex;
         justify-content: space-evenly;
-        margin: 1rem auto;
+        padding: 1rem;
+        margin: auto;
     }
     &__link {
         text-decoration: none;
-        font-family: LemonMilk;
+        font-family: Primary;
+        color: colors.$Black;
         &:visited {
             color: colors.$Black;
         }
@@ -20,19 +37,15 @@
     }
 }
 
-@media (orientation: portrait) {
-    .header {
-        width: calc(100vw - 3rem);
-        &__container {
-            width: 80%;
-        }
-    }
-}
+// @media (orientation: portrait) {
+//     .header {
+       
+       
+//     }
+// }
 
-@media (orientation: landscape) {
-    .header {
-        &__container {
-            width: 50%;
-        }
-    }
-}
+// @media (orientation: landscape) {
+//     .header {
+  
+//     }
+// }

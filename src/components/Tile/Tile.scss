@@ -1,0 +1,17 @@
+.tile {
+    margin-top: 8rem;
+    width: 20rem;
+}
+
+@media (orientation: portrait) {
+    .tile{
+      
+    }
+  }
+  
+  @media (orientation: landscape) {
+    .tile {
+
+    }
+  }
+  

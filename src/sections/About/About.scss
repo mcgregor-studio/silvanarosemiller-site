@@ -4,70 +4,63 @@
 @keyframes loading {
     0% {
       opacity: 0;
-      top: 1rem;
+      left: 1rem;
     }
     100% {
       opacity: 1;
-      top: 0;
+      left: 0;
     }
   }
 
 .about {
+  @include mixins.section-margin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     animation-name: loading;
     animation-duration: 1s;
     &__title {
-        width: 80%;
+        width: 100%;
         margin: 1rem auto;   
     }
-    &__tile {
-      cursor: pointer;
-        @include mixins.tile;
+    &__text {
+      margin: 0 5rem;
+    }
+    &__image {
+      & > img {
+      max-width: 75%;
+      }
     }
     &__container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
-    &__modal {
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 100;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(53,53,53,0.5);
-      &--container {
-        position: relative;
-      }
-      &--image {
-        max-height: 80%;
-      }
-    }
 }
 
 @media (orientation: portrait) {
-  .creative {
-  &__modal {
-    &--image {
-      max-width: 80%;
+  .about {
+    margin: 2rem;
+   flex-direction: column;
+   &__image {
+    & > img {
+      width: 70%;
     }
+  }
+  &__text {
+    margin: 0;
   }
 }
 }
 
 @media (orientation: landscape) {
-  .creative {
+  .about {
     &__container {
-      max-width: 40rem;
       margin: auto;
     }
-    &__modal {
-      &--image {
-        max-height: 80%;
-      }
+    &__text {
+      max-width: 40rem;
     }
   }
 }

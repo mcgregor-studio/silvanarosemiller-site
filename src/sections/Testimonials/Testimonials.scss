@@ -14,74 +14,43 @@
 }
 
 .testimonials {
+  background-color: #ffc2bd;
+  padding: 0;
   &__container {
     position: relative;
     animation-name: loading;
     animation-duration: 1s;
   }
-  &__card {
-    &--icon {
-      transition: transform 0.2s, color 1s;
-    }
-    &--link {
-      &:hover {
-        .homepage__card--icon {
-          transform: scale(1.1);
-        }
-        .contact {
-          color: colors.$Magenta;
-        }
-        .coding {
-          color: colors.$Cyan;
-        }
-        .creative {
-          color: colors.$Yellow;
-        }
-      }
-    }
+  &__title {
+    top: 8rem;
+    position: relative;
+    z-index: 6000;
   }
 }
 
 @media (orientation: portrait) {
-  .homepage {
+  .testimonials {
+    @include mixins.section-margin;
     &__container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-    &__card {
-      @include mixins.homecard;
-      width: 22rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &--text {
-        font-family: LemonMilk;
-        font-size: 2.5rem;
-        position: relative;
-        text-align: left;
-        margin-right: 2rem;
-      }
-      &--link {
-        text-decoration: none;
-        &:visited {
-          color: colors.$Black;
-        }
-      }
-      &--icon {
-        width: 5rem;
-      }
-    }
   }
 }
 
 @media (orientation: landscape) {
-  .homepage {
-    height: auto;
-    min-height: 100%;
-
-    
+  .testimonials {
+    position: relative;
+    height: 50rem;
+    &__background {
+      height: 50rem;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
     &__title {
       width: 80%;
       margin: 1rem auto;
@@ -92,23 +61,6 @@
       height: 20rem;
       display: flex;
       justify-content: center;
-    }
-    &__card {
-      @include mixins.homecard;
-      height: calc(100% - 2rem);
-      width: 100%;
-      &--text {
-        font-family: LemonMilk;
-      }
-      &--link {
-        text-decoration: none;
-        &:visited {
-          color: colors.$Black;
-        }
-      }
-      &--icon {
-        width: 10rem;
-      }
     }
   }
 }

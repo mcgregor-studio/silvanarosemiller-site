@@ -1,0 +1,14 @@
+@use "../../styles/partials/colors.scss";
+
+.divider {
+    background: colors.$OffBlack;
+    width: 80vw;
+    margin: auto;
+    height: 1px;
+}
+
+@media (orientation: portrait) {
+    .divider {
+        display: none;
+    }
+  }

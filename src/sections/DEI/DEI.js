@@ -5,7 +5,9 @@ import "./DEI.scss";
 export default function DEI() {
   return (
     <section className="dei" id="dei">
-      <img className="dei__image" src={inclusion} />
+      <div className="dei__image">
+        <img  src={inclusion} />
+      </div>
       <div className="dei__container">
         <h2 className="dei__title">DEI Consulting Services</h2>
         <p className="dei__text">
@@ -15,7 +17,9 @@ export default function DEI() {
           conception to final delivery and supports productions in the aim to
           have authentic non-stereotypical characters and stories. Notes would
           cover cultural insights, historical backgrounds, and any political or
-          pop cultural events that may cause any DEI flags. Services can be
+          pop cultural events that may cause any DEI flags. 
+          <br />
+          <br />Services can be
           provided for:
         </p>
         <ul className="dei__list">

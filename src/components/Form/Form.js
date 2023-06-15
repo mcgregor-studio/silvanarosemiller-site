@@ -4,11 +4,14 @@ export default function Form(props) {
   if (!props.useForm) {
     return (
       <div>
-        <h2 className="contact__hello">Get in Touch</h2>
-        <p>
+        <h2 className="contact__title">Get in Touch</h2>
+        <p className="contact__text">
           For all business inquiries, reach out with the contact information
-          below, or send a message using the form. Looking forward to working
-          together!
+          below, or send a message using the form.
+          <br />
+          <br /> Looking forward to working together! <br />
+          <br />
+          <strong>Email: </strong>silvanarosemiller@gmail.com
         </p>
         <form className="contact__form " onSubmit={props.submit}>
           <div className="contact__form--container">
