@@ -72,6 +72,7 @@
         }
     }
     &__message {
+        color: colors.$White;
         position: relative;
         margin-top: 5rem;
         animation-name: loading;
@@ -96,7 +97,7 @@
     .contact {   
         &__text {
             width: 60%;
-            margin: auto;
+            margin: 0 auto 2rem auto;
         }
         &__form {
             &--container{
