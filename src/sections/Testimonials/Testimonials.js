@@ -15,7 +15,6 @@ export default function Testimonials() {
       },
     })
       .then(function (response) {
-        console.log(response);
         return response.json();
       })
       .then(function (myJson) {
